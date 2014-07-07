@@ -37,7 +37,7 @@ minetest.register_on_chat_message(function(name, message)
 	end
 	
 	if not privs.bot then
-	minetest.chat_send_player(name, "<BOT> You're are  not authrized to preform this command", true)
+		minetest.chat_send_player(name, "<BOT> You're not authrized to use this command", true)
 		return
 	end
 
