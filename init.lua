@@ -35,12 +35,6 @@ minetest.register_on_chat_message(function(name, message)
 		end
 			return
 	end
-	
-	if not privs.bot then
-		minetest.chat_send_player(name, "<BOT> You're not authrized to use this command", true)
-		return
-	end
-
 end)
 
 --register priv
@@ -49,4 +43,3 @@ minetest.register_privilege("bot", {
 	description = "use the shadowbot like bot.",
 	give_to_singleplayer= false,
 })
-
