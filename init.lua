@@ -5,7 +5,7 @@ minetest.register_privilege("bot", {
 
 minetest.register_chatcommand("gbot", {
 	params = "",
-	description = "command the bot to give useful infomation",
+	description = "Command the bot to give useful information",
 	func = function(player, message)
 	local pretext = ""
 
@@ -39,6 +39,9 @@ minetest.register_chatcommand("gbot", {
 
 		["~extraprivs"] = { "Please don't ask for privileges like fly or no-clip or admin access. " ..
 													"You won't get them." },
+
+		["~spam"] = { "Please don't flood the chat. it very annoying and interferes with important conversations " ..
+													"not to mention it irritates everyone." },
 	}
 
 	if message == nil or message:sub(1, 1) ~= '~' then
