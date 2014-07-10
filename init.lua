@@ -3,8 +3,10 @@ minetest.register_privilege("bot", {
 	give_to_singleplayer= false,
 })
 
-minetest.register_on_chat_message(function(player, message)
-
+minetest.register_chatcommand("gbot", {
+	params = "",
+	description = "Test 1: Modify player's inventory view",
+	func = function(player, message)
 	local pretext = ""
 
 	local responses = {
@@ -57,5 +59,5 @@ minetest.register_on_chat_message(function(player, message)
 	for _, ln in ipairs(lines) do
 		minetest.chat_send_all(pretext .. ln)
 	end
-end)
+end,})
 
