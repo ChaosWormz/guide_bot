@@ -5,7 +5,7 @@ minetest.register_privilege("bot", {
 
 minetest.register_chatcommand("gbot", {
 	params = "",
-	description = "Test 1: Modify player's inventory view",
+	description = "command the bot to give useful infomation",
 	func = function(player, message)
 	local pretext = ""
 
