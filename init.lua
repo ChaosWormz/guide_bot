@@ -60,7 +60,9 @@ minetest.register_chatcommand("gbot", {
 	end
 
 	for _, ln in ipairs(lines) do
-		minetest.chat_send_all(pretext .. ln)
+		local msg = pretext .. ln
+		minetest.chat_send_all(msg)
+		irc:say(("* %s %s"):format("", msg))
 	end
 end,})
 
