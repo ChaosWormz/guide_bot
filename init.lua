@@ -10,43 +10,39 @@ minetest.register_chatcommand("gbot", {
 	local pretext = ""
 
 	local responses = {
-		["~protect"] = 	{	"To protect your area: dig down in one corner and type: '/area_pos1'. " ..
+		["protect"] = 	{	"To protect your area: dig down in one corner and type: '/area_pos1'. " ..
 													"Then stack high in the opposite corner and type: '/area_pos2'",
 												"Once you have set the area positions, type: '/protect (your area's name)' without quotes or parentheses. " ..
 													"If this is too hard, ask a moderator or admin for help."
 		},
 
-		["~respect"] = 	{ "Respect other players. Threats of any kind are unwelcome. " ..
+		["respect"] = 	{ "Respect other players. Threats of any kind are unwelcome. " ..
 												"Discrimination is not tolerated. Be polite."
 		},
 
-		["~skins"] = 		{ "To get a custom skin you will need to provide a link to it and give it to an Admin. " ..
+		["skins"] = 		{ "To get a custom skin you will need to provide a link to it and give it to an Admin. " ..
 												"Don't ask an Admin to pick a skin for you. Your skin will be enabled after a server " ..
 												"restart"
 		},
 
-		["~dating"] =		{ "This server is not a dating service. Using it as such will result in a ban." },
+		["dating"] =		{ "This server is not a dating service. Using it as such will result in a ban." },
 
-		["~interact"] = { "In order to be able to play you will first need to read and agree with the rules, " ..
+		["interact"] = { "In order to be able to play you will first need to read and agree with the rules, " ..
 												"and then ask a member of staff to give you interact."
 		},
 
-		["~english"] =	{ "The majority of players on this server speak English. " ..
+		["english"] =	{ "The majority of players on this server speak English. " ..
 												"So that we can all communicate, please speak in English."
 		},
 
-		["~language"] = { "This is a family-friendly server: that means no swearing or profanity." },
+		["language"] = { "This is a family-friendly server: that means no swearing or profanity." },
 
-		["~extraprivs"] = { "Please don't ask for privileges like fly or no-clip or admin access. " ..
+		["extraprivs"] = { "Please don't ask for privileges like fly or no-clip or admin access. " ..
 													"You won't get them." },
 
-		["~spam"] = { "Please don't flood the chat. it very annoying and interferes with important conversations " ..
+		["spam"] = { "Please don't flood the chat. it very annoying and interferes with important conversations " ..
 													"not to mention it irritates everyone." },
 	}
-
-	if message == nil or message:sub(1, 1) ~= '~' then
-		return
-	end
 
 	if not minetest.get_player_privs(player).bot then
 		minetest.chat_send_player(player, "Insufficient privileges", true)
@@ -63,4 +59,3 @@ minetest.register_chatcommand("gbot", {
 		minetest.chat_send_all(pretext .. ln)
 	end
 end,})
-
