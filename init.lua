@@ -42,6 +42,10 @@ minetest.register_chatcommand("gbot", {
 
 		["spam"] = { "Please don't flood the chat. it very annoying and interferes with important conversations " ..
 													"not to mention it irritates everyone." },
+
+--remove or alter following line if your server does't have crafting guide or it works differently
+		["craft"] = { "This server has a crafting guide that can be accessed by typing /m in the chat-box." ..
+													"it is button number 2." },
 	}
 
 	if not minetest.get_player_privs(player).bot then
