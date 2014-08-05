@@ -40,6 +40,12 @@ minetest.register_chatcommand("gbot", {
 		["extraprivs"] = { "Please don't ask for privileges like fly or no-clip or admin access. " ..
 													"You won't get them." },
 
+		["notminecraft"] = { "MineTest isn't Minecraft  commands like gamemode 1 and op don't work here" ..
+													"You won't get them anyways." },
+
+		["themaze"] = { "All new players must complete the maze. this maze is very easy it's about how to behave on the server. " ..
+													"Please don't ask to be teleported out of the maze before completion." },
+
 		["spam"] = { "Please don't flood the chat. it very annoying and interferes with important conversations " ..
 													"not to mention it irritates everyone." },
 
