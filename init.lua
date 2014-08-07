@@ -27,7 +27,7 @@ minetest.register_chatcommand("gbot", {
 
 		["dating"] =		{ "This server is not a dating service. Using it as such will result in a ban." },
 
-		["interact"] = { "In order to be able to play you will first need to read and agree with the rules, " ..
+		["interact"] = { "In order to play you will first need to read and agree with the rules, " ..
 												"and then ask a member of staff to give you interact."
 		},
 
@@ -40,18 +40,19 @@ minetest.register_chatcommand("gbot", {
 		["extraprivs"] = { "Please don't ask for privileges like fly or no-clip or admin access. " ..
 													"You won't get them." },
 
-		["notminecraft"] = { "MineTest isn't Minecraft  commands like gamemode 1 and op don't work here" ..
-													"You won't get them anyways." },
+		["notminecraft"] = { "Minetest isn't Minecraft. Commands like gamemode 1 and op don't work. " ..
+													"Even if they did work you would not get them." },
 
-		["themaze"] = { "All new players must complete the maze. this maze is very easy it's about how to behave on the server. " ..
+		["themaze"] = { "All new players must complete the maze. The maze is very easy if you have read the rules. Read each" ..
+													" sign and choose the door that has the correct answer. " ..
 													"Please don't ask to be teleported out of the maze before completion." },
 
-		["spam"] = { "Please don't flood the chat. it very annoying and interferes with important conversations " ..
+		["spam"] = { "Please don't flood the chat. It very annoying and interferes with important conversations " ..
 													"not to mention it irritates everyone." },
 
 --remove or alter following line if your server does't have crafting guide or it works differently
 		["craft"] = { "This server has a crafting guide that can be accessed by typing /m in the chat-box." ..
-													"it is button number 2." },
+													" It is button number 2." },
 	}
 
 	if not minetest.get_player_privs(player).bot then
